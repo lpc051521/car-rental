@@ -11,12 +11,16 @@
         </div>
       </Head>
       <Index_Content></Index_Content>
+      <Head></Head>
+      <!-- <Shop></Shop> -->
+
     </div>
 </template>
 
 <script>
   import Head from '../../components/head/head'
   import Index_Content from '../../components/index/index-content/index-content'
+  import Shop from "../ch_shop/shop"
 
   export default {
         data() {
@@ -25,6 +29,8 @@
         computed: {},
         components: {
           Head,Index_Content
+          Head,Shop
+
         },
         created() {
         },

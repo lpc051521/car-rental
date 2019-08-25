@@ -1,7 +1,6 @@
 <template>
     <div class="head">
       <img src="./img/icon3@2x.png" alt="" class="search_icon">
-
       <div class="title">
           <img src="./img/icon1@2x.png" alt="">
           <div class="search">

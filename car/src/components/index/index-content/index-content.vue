@@ -1,5 +1,15 @@
 <template>
     <div class="content">
+      <Head>
+        <img src="./../../head/img/icon3@2x.png" alt="" class="search_icon">
+        <div class="title">
+          <img src="./../../head/img/icon1@2x.png" alt="">
+          <div class="search">
+            <input type="text" placeholder="查找车型/店面">
+          </div>
+          <img src="./../../head/img/icon2@2x.png" alt="">
+        </div>
+      </Head>
       <div class="banner">
           <img src="./img/banner@2x.png" alt="">
       </div>
@@ -91,17 +101,20 @@
 </template>
 
 <script>
+  import Head from '../../../components/head/head'
     export default {
         data() {
             return {msg: 'hello'}
         },
         computed: {},
-        components: {},
+        components: {
+          Head
+        },
         created() {
         },
         methods: {
           go(){
-            this.$router.push('/all');
+            this.$router.push('/shop');
           }
         }
     }

@@ -2,20 +2,10 @@
   <div class="head">
     <slot></slot>
   </div>
-    <div class="head">
-      <img src="./img/icon3@2x.png" alt="" class="search_icon">
-      <div class="title">
-          <img src="./img/icon1@2x.png" alt="">
-          <div class="search">
-            <input type="text" placeholder="查找车型/店面">
-          </div>
-          <img src="./img/icon2@2x.png" alt="">
-        </div>
-    </div>
-
 </template>
 
 <script>
+
   export default {
     data() {
       return {}

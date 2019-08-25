@@ -17,6 +17,6 @@ new Vue({
     window.onresize = obj.setRem;
   },
   beforeCreate() {
-    this.$router.push('/home');
+    this.$router.push('/index');
   }
 });

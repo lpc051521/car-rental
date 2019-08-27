@@ -1,41 +1,41 @@
 <template>
-  <div class="shop">
-    <Head>
-         <div class="title">
-          <img src="./img/btn1@2x.png" alt="">
-          <h3>门店信息</h3>    
-          <img src="./img/btn2@2x.png" alt="">
+ <div class="comment">
+     <Head>
+        <div class="title">
+            <img src="./img/icon_1@2x.png" alt="">
+            <h3>评论</h3>
+            <img src="./img/icon2@2x.png" alt="">
         </div>
-    </Head>
-    <Title></Title>
-    <User></User>
-    <Bottom></Bottom>
-  </div>
+     </Head>
+     <Car></Car>
+     <Button></Button>
+ </div>
 </template>
 
 <script>
-import Head from "../../components/head/head";
-import Title from "./shoptitle";
-import User from "./use_";
-import Bottom from "./bottom";
-
+import Head from "../head/head"
+import Car from "./car_start"
+import Button from "./button"
 export default {
-  props: {},
-  data() {
-    return {};
-  },
-  methods: {},
-  components: {
-    Title,
-    User,
-    Bottom,
-    Head
-  }
+ props: {
+
+ },
+ data() {
+ return {
+
+ };
+ },
+ methods: {
+
+ },
+ components: {
+     Head,Car,Button
+ },
 };
 </script>
 
 <style scoped lang="less">
-.shop {
+.comment {
   width: 100%;
   height: 100%;
   background-color: #f6f6f6;
@@ -60,5 +60,4 @@ export default {
     }
   }
 }
-
 </style>

@@ -1,41 +1,43 @@
 <template>
-  <div class="shop">
-    <Head>
-         <div class="title">
-          <img src="./img/btn1@2x.png" alt="">
-          <h3>门店信息</h3>    
-          <img src="./img/btn2@2x.png" alt="">
+ <div class="wallet">
+     <Head>
+        <div class="title">
+            <img src="./img/icon1@2x.png" alt="">
+            <h3>钱包</h3>    
+            <img src="./img/icon2@2x.png" alt="">
         </div>
-    </Head>
-    <Title></Title>
-    <User></User>
-    <Bottom></Bottom>
-  </div>
+     </Head>
+     <My></My>
+     <Card></Card>
+     <Foot></Foot>
+ </div>
 </template>
 
 <script>
-import Head from "../../components/head/head";
-import Title from "./shoptitle";
-import User from "./use_";
-import Bottom from "./bottom";
-
+import Head from "../head/head"
+import My from "./my"
+import Card from "./card"
+import Foot from "./wallet_foot"
 export default {
-  props: {},
-  data() {
-    return {};
-  },
-  methods: {},
-  components: {
-    Title,
-    User,
-    Bottom,
-    Head
-  }
+ props: {
+
+ },
+ data() {
+ return {
+
+ };
+ },
+ methods: {
+
+ },
+ components: {
+     Head,My,Card,Foot
+ },
 };
 </script>
 
 <style scoped lang="less">
-.shop {
+.wallet {
   width: 100%;
   height: 100%;
   background-color: #f6f6f6;
@@ -60,5 +62,4 @@ export default {
     }
   }
 }
-
 </style>

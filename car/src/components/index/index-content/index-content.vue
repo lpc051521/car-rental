@@ -167,6 +167,10 @@
         },
         methods: {
           go(){
+
+            this.$router.push('');
+          }
+
             this.$router.push('/all');
           },
           showPopup() {
@@ -178,6 +182,7 @@
           order(){
             this.$router.push('/order');
           },
+
         }
     }
 </script>
@@ -186,7 +191,11 @@
 .content{
   /*font-size: 0;*/
   width: 100%;
+
+.head {
+
   .head {
+
     font-size: 0;
     height: .44rem;
     background-color: rgb(255, 224, 9);

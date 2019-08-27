@@ -1,41 +1,43 @@
 <template>
-  <div class="shop">
+ <div class="done">
     <Head>
-         <div class="title">
-          <img src="./img/btn1@2x.png" alt="">
-          <h3>门店信息</h3>    
-          <img src="./img/btn2@2x.png" alt="">
+        <div class="title">
+            <img src="./img/icon1@2x.png" alt="">
+            <h3>完成订单</h3>    
+            <img src="./img/icon2@2x.png" alt="">
         </div>
-    </Head>
-    <Title></Title>
-    <User></User>
-    <Bottom></Bottom>
-  </div>
+     </Head>
+     <Cd></Cd>
+     <Do></Do>
+     <Low></Low>
+ </div>
 </template>
 
 <script>
-import Head from "../../components/head/head";
-import Title from "./shoptitle";
-import User from "./use_";
-import Bottom from "./bottom";
-
+import Head from "../head/head"
+import Cd from './car_done';
+import Do from './do'
+import Low from './low'
 export default {
-  props: {},
-  data() {
-    return {};
-  },
-  methods: {},
-  components: {
-    Title,
-    User,
-    Bottom,
-    Head
-  }
+ props: {
+
+ },
+ data() {
+ return {
+
+ };
+ },
+ methods: {
+
+ },
+ components: {
+     Head,Cd,Do,Low
+ },
 };
 </script>
 
 <style scoped lang="less">
-.shop {
+.done {
   width: 100%;
   height: 100%;
   background-color: #f6f6f6;
@@ -60,5 +62,4 @@ export default {
     }
   }
 }
-
 </style>

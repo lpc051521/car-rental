@@ -4,7 +4,7 @@
         <li><p>郑州花园路店(金水区)</p></li>
         <li><p class="little">门店地址:郑州花园路附近</p></li>
         <li><p class="little">营业时间:9:00-18:00</p></li>
-        <li class="jpg"><img src="./img/icon-1@2x.png" alt=""><img src="./img/icon-2@2x.png" alt=""></li>
+        <li class="jpg"><img src="./img/icon-1@2x.png" alt="" @click="go"><img src="./img/icon-2@2x.png" alt=""></li>
      </ul>
      <ul class="bottom">
          <li>
@@ -34,7 +34,9 @@ export default {
  };
  },
  methods: {
-
+    go(){
+        this.$router.push('/city');
+    }
  },
  components: {
 

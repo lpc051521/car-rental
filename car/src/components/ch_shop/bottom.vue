@@ -1,7 +1,7 @@
 <template>
  <div class="bottom">
      <p><span class="a">￥</span>168<span class="b">/小时</span></p>
-     <button>预约此车</button>
+     <button @click="go">预约此车</button>
  </div>
 </template>
 
@@ -16,7 +16,9 @@ export default {
  };
  },
  methods: {
-
+      go(){
+        this.$router.push('/details');
+    }
  },
  components: {
 

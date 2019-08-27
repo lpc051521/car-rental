@@ -114,7 +114,7 @@
         },
         methods: {
           go(){
-            this.$router.push('/shop');
+            this.$router.push('');
           }
         }
     }

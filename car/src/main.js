@@ -3,6 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueTouch from "vue-touch";
+// import $ from 'zepto'
+
+Vue.use(VueTouch, {name:'v-touch'});
+
+
+import Vant from 'vant';
+import 'vant/lib/index.css';
+
+Vue.use(Vant);
 
 Vue.config.productionTip = false;
 import { obj } from '../static/js/utils'

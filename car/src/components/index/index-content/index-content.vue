@@ -1,9 +1,59 @@
 <template>
     <div class="content">
+      <van-popup v-model="show" position="left"
+                 :style="{ width: '70%',height:'100%' }">
+        <div class="user-content">
+          <div class="user">
+            <img src="./../../personal/img/img_1@2x.png" alt="" class="user-img">
+            <div class="number">
+              <p></p>
+              <span></span>
+              <button @click="login">未登录</button>
+            </div>
+          </div>
+          <div class="user-bg"></div>
+          <ul>
+            <li>
+              <img src="./../../personal/img/icon-1@2x.png" alt="">
+              <p>我的钱包</p>
+              <img src="./../../personal/img/icon-7@2x.png" alt="">
+            </li>
+            <li>
+              <img src="./../../personal/img/icon-2@2x.png" alt="">
+              <p @click="order">我的订单</p>
+              <img src="./../../personal/img/icon-7@2x.png" alt="">
+            </li>
+            <li>
+              <img src="./../../personal/img/icon-3@2x.png" alt="">
+              <p>我的消息</p>
+              <img src="./../../personal/img/icon-7@2x.png" alt="">
+            </li>
+            <li>
+              <img src="./../../personal/img/icon-4@2x.png" alt="">
+              <p>帮助中心</p>
+              <img src="./../../personal/img/icon-7@2x.png" alt="">
+            </li>
+            <li>
+              <img src="./../../personal/img/icon-5@2x.png" alt="">
+              <p>设置</p>
+              <img src="./../../personal/img/icon-7@2x.png" alt="">
+            </li>
+            <li>
+              <img src="./../../personal/img/icon-6@2x.png" alt="">
+              <p>检测更新</p>
+              <img src="./../../personal/img/icon-7@2x.png" alt="">
+            </li>
+          </ul>
+        </div>
+      </van-popup>
+
       <Head>
         <img src="./../../head/img/icon3@2x.png" alt="" class="search_icon">
         <div class="title">
-          <img src="./../../head/img/icon1@2x.png" alt="">
+          <van-button type="primary" @click="showPopup">
+            <img src="./../../head/img/icon1@2x.png" alt="">
+          </van-button>
+
           <div class="search">
             <input type="text" placeholder="查找车型/店面">
           </div>
@@ -11,7 +61,7 @@
         </div>
       </Head>
       <div class="banner">
-          <img src="./img/banner@2x.png" alt="">
+          <img src="./img/banner@2x.png" alt="" @click="go">
       </div>
       <div class="bg">
           <div class="drop-box">
@@ -68,7 +118,7 @@
             <span>送车上门</span>
           </div>
           <div class="button">
-            <button>立即选车</button>
+            <button @click="go">立即选车</button>
           </div>
           <div class="recommend">
             <div class="text">
@@ -76,7 +126,7 @@
                 <p>推荐车型：</p>
               </div>
               <div class="all">
-                <span @click="go">查看全部 ＞</span>
+                <span>查看全部 ＞</span>
               </div>
             </div>
           </div>
@@ -104,7 +154,10 @@
   import Head from '../../../components/head/head'
     export default {
         data() {
-            return {msg: 'hello'}
+            return {
+              show: false
+            };
+
         },
         computed: {},
         components: {
@@ -114,17 +167,71 @@
         },
         methods: {
           go(){
+
             this.$router.push('');
           }
+
+            this.$router.push('/all');
+          },
+          showPopup() {
+            this.show = true;
+          },
+          login(){
+            this.$router.push('/login');
+          },
+          order(){
+            this.$router.push('/order');
+          },
+
         }
     }
 </script>
 
 <style scoped lang="less">
 .content{
-  font-size: 0;
+  /*font-size: 0;*/
   width: 100%;
 
+.head {
+
+  .head {
+
+    font-size: 0;
+    height: .44rem;
+    background-color: rgb(255, 224, 9);
+    .search_icon {
+      width: .27rem;
+      height: .27rem;
+      position: absolute;
+      left: 1.23rem;
+      top: .09rem;
+    }
+    .title {
+      width: 100%;
+      height: .44rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 .15rem;
+      img {
+        width: .22rem;
+        height: .22rem;
+      }
+      .search {
+        display: flex;
+        width: 2.25rem;
+        height: .32rem;
+        border-radius: .16rem;
+        background-color: #fff;
+        justify-content: center;
+
+        input {
+          text-align: center;
+          font-size: .12rem;
+        }
+      }
+    }
+  }
   .banner{
     font-size: 0;
     img{
@@ -135,7 +242,7 @@
   .bg{
     width: 100%;
     position: absolute;
-    z-index: 9999;
+    z-index: 1000;
     font-size: .2rem;
     background-color: #fff;
     border-radius: .2rem;
@@ -352,6 +459,76 @@
           height: .95rem;
           margin: .1rem 0 0 .1rem;
         }
+      }
+    }
+  }
+/*个人中心*/
+  .van-overlay{
+    .van-popup{
+
+    }
+  }
+
+  .van-button{
+    background-color: rgba(0,0,0,0);
+    border: none;
+  }
+  .user-content{
+    background: url('./../../personal/img/img_2@2x.png')no-repeat 0 4.75rem;
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    color: #000;
+    .user{
+      display: flex;
+      align-items: center;
+      .user-img{
+        width: .6rem;
+        height: .6rem;
+        margin: .28rem .22rem .28rem .25rem;
+      }
+      .number{
+        button{
+          width: .64rem;
+          height: .24rem;
+          font-size: .1rem;
+          border-radius: .12rem;
+          background-color: #ffe009;
+        }
+      }
+    }
+    .user-bg{
+      height: .1rem;
+      background-color: #f6f6f6;
+    }
+    ul{
+    margin-top: .14rem;
+
+      li{
+        height: .42rem;
+        font-size: .16rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 .15rem;
+        text-align: left;
+        p{
+          flex: 2;
+          padding-left: .1rem;
+        }
+        img:first-child{
+          width: .22rem;
+          height: .22rem;
+        }
+        img:last-child{
+          width: .07rem;
+          height: .13rem;
+        }
+      }
+
+      li:hover{
+        background-color: #fff6b7;
       }
     }
   }

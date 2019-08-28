@@ -2,7 +2,7 @@
  <div class="details">
      <Head>
          <div class="title">
-          <img src="./img/icon-1@2x.png" alt="">
+          <img src="./img/icon-1@2x.png" alt="" @click="back">
           <h3>订单详情</h3>    
           <img src="./img/icon-2@2x.png" alt="">
         </div>
@@ -32,7 +32,9 @@ export default {
  };
  },
  methods: {
-
+back(){
+  this.$router.go(-1);
+}
  },
  components: {
      Head,Carde,Also,Money,Favorable,Butn

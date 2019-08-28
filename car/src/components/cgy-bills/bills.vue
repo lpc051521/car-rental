@@ -4,7 +4,7 @@
     <div class="head">
       <div class="top"></div>
       <div class="bottom">
-        <img src="./img/icon-1.png" alt />
+        <img src="./img/icon-1.png" @click="back">
         <h1>支付订单</h1>
       </div>
     </div>
@@ -17,7 +17,7 @@
         <p>
           <span>￥</span>1064
         </p>
-        <div>
+        <div @click="back">
           订单详情
           <img src="./img/icon-2.png" alt />
         </div>
@@ -43,7 +43,7 @@
           <span>支付宝支付</span>
           <img src="./img/icon-8.png" alt />
         </div>
-        <button>确认支付</button>
+        <button @click="done">确认支付</button>
       </div>
     </div>
   </div>
@@ -56,7 +56,14 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    back(){
+      this.$router.go(-1);
+    },
+    done(){
+      this.$router.push('/done');
+    }
+  },
   components: {
     // Head
   }

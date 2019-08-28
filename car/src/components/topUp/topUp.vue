@@ -3,7 +3,7 @@
     <div class="head">
       <div class="top"></div>
       <div class="buttom">
-        <img src="./img/icon1.png" alt />
+        <img src="./img/icon1.png" @click="back">
         <h1>充值</h1>
       </div>
     </div>
@@ -95,7 +95,11 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    back(){
+      this.$router.go(-1);
+    }
+  },
   components: {}
 };
 </script>

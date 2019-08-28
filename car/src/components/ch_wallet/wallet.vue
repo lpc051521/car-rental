@@ -2,7 +2,7 @@
  <div class="wallet">
      <Head>
         <div class="title">
-            <img src="./img/icon1@2x.png" alt="">
+            <img src="./img/icon1@2x.png" alt="" @click="back">
             <h3>钱包</h3>    
             <img src="./img/icon2@2x.png" alt="">
         </div>
@@ -28,7 +28,9 @@ export default {
  };
  },
  methods: {
-
+back(){
+  this.$router.go(-1);
+}
  },
  components: {
      Head,My,Card,Foot

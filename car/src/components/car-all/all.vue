@@ -53,8 +53,8 @@
               <div class="site">
                 <div class="top">
                   <img src="./img/icon@2x.png" alt class="barn" />
-                  <h4>郑州花园路门店</h4>
-                  <p>></p>
+                  <h4 @click="shop">郑州花园路门店</h4>
+                  <p><img src="./cgy-img/icon2.png" alt=""></p>
                   <img src="./cgy-img/icon3.png" alt class="star" />
                 </div>
               </div>
@@ -73,10 +73,10 @@
                 </div>
                 <div class="three">
                   <p>本月被租车次数: 10次</p>
-                  <p class="two_p">￥199/小时</p>
+                  <s class="two_p">￥199/小时</s>
                 </div>
               </div>
-              <div class="button">预约此车</div>
+              <div class="button" @click="details">预约此车</div>
             </div>
           </van-popup>
         </li>
@@ -204,6 +204,12 @@
         let ul = document.getElementById('img_all');
         let lis = ul.childNodes
         // console.log(lis)
+      },
+      details(){
+        this.$router.push('/details');
+      },
+      shop(){
+        this.$router.push('/shop');
       }
     }
   }

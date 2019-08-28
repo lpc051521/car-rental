@@ -15,7 +15,7 @@
           <ul>
             <li>
               <img src="./../../personal/img/icon-1@2x.png" alt="">
-              <p>我的钱包</p>
+              <p @click="wallet">我的钱包</p>
               <img src="./../../personal/img/icon-7@2x.png" alt="">
             </li>
             <li>
@@ -153,37 +153,38 @@
 <script>
   import Head from '../../../components/head/head'
     export default {
-        data() {
-            return {
-              show: false
-            };
+      data() {
+        return {
+          show: false
+        };
 
+      },
+      computed: {},
+      components: {
+        Head
+      },
+      created() {
+      },
+      methods: {
+        showPopup() {
+          this.show = true;
         },
-        computed: {},
-        components: {
-          Head
+        login() {
+          this.$router.push('/login');
         },
-        created() {
+        order() {
+          this.$router.push('/order');
         },
-        methods: {
-          go(){
+        go() {
 
-            this.$router.push('');
-          }
-
-            this.$router.push('/all');
-          },
-          showPopup() {
-            this.show = true;
-          },
-          login(){
-            this.$router.push('/login');
-          },
-          order(){
-            this.$router.push('/order');
-          },
-
+          this.$router.push('/all');
+        },
+        wallet(){
+          this.$router.push('/wallet');
         }
+        // this.$router.push('/all');
+      }
+
     }
 </script>
 
@@ -192,7 +193,7 @@
   /*font-size: 0;*/
   width: 100%;
 
-.head {
+
 
   .head {
 
@@ -232,14 +233,14 @@
       }
     }
   }
-  .banner{
+  .banner {
     font-size: 0;
-    img{
+    img {
       width: 100%;
       height: 1.94rem;
     }
   }
-  .bg{
+  .bg {
     width: 100%;
     position: absolute;
     z-index: 1000;
@@ -247,44 +248,44 @@
     background-color: #fff;
     border-radius: .2rem;
     margin-top: -.15rem;
-    .drop-box{
+    .drop-box {
       width: 100%;
       height: .85rem;
       font-size: .12rem;
       text-align: left;
 
-      .top{
+      .top {
         padding-left: .3rem;
         height: .42rem;
         line-height: .42rem;
         color: #999;
         border-bottom: 1px solid #f1f1f1;
-        .on{
+        .on {
           width: .5rem;
           font-size: .15rem;
           background: url("./img/icon4.png") no-repeat .3rem -.01rem;
           margin-left: .19rem;
         }
-        .on-address{
+        .on-address {
           font-size: .15rem;
           width: 1.5rem;
           margin-left: .3rem;
           background: url("./img/icon4.png") no-repeat 1.2rem -.01rem;
         }
       }
-      .bottom{
+      .bottom {
         padding-left: .3rem;
         height: .42rem;
         line-height: .42rem;
         color: #999;
         border-bottom: 1px solid #f1f1f1;
-        .to{
+        .to {
           font-size: .15rem;
           width: .5rem;
           margin-left: .19rem;
           background: url("./img/icon4.png") no-repeat .3rem -.01rem;
         }
-        .to-address{
+        .to-address {
           margin-left: .3rem;
           font-size: .15rem;
           width: 1.5rem;
@@ -292,30 +293,30 @@
         }
       }
     }
-    .go{
+    .go {
       padding: 0 .3rem;
       margin-top: .12rem;
-      &>p{
+      & > p {
         width: 100%;
         display: flex;
         justify-content: space-between;
         font-size: .12rem;
         color: #999;
       }
-      .time{
+      .time {
         display: flex;
         justify-content: space-between;
         font-size: .14rem;
-        color: rgb(51,51,51);
+        color: rgb(51, 51, 51);
         font-weight: 600;
         margin-top: .15rem;
         text-align: left;
-        .img{
+        .img {
           font-size: .12rem;
           color: #999;
           font-weight: 500;
           text-align: center;
-          img{
+          img {
             width: .65rem;
             height: .13rem;
             margin-top: -.05rem;
@@ -323,53 +324,53 @@
         }
       }
     }
-    .door{
+    .door {
       display: flex;
       font-size: .12rem;
       align-items: center;
-      color: rgb(102,102,102);
+      color: rgb(102, 102, 102);
       padding-left: .3rem;
       margin-top: .12rem;
-      img{
+      img {
         text-align: left;
         width: .12rem;
         height: .12rem;
         margin-right: .05rem;
       }
     }
-    .button{
-      button{
+    .button {
+      button {
         width: 1.75rem;
         height: .38rem;
-        background-color: rgb(255,225,9);
+        background-color: rgb(255, 225, 9);
         border-radius: .19rem;
-        color: rgb(51,51,51);
+        color: rgb(51, 51, 51);
         margin-top: .13rem;
       }
     }
-    .recommend{
+    .recommend {
       padding: 0 .15rem;
       margin-top: .21rem;
-      .text{
+      .text {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .models{
+        .models {
           font-size: .18rem;
-          color: rgb(51,51,51);
+          color: rgb(51, 51, 51);
         }
-        .all{
+        .all {
           font-size: .12rem;
-          color: rgb(102,102,102);
+          color: rgb(102, 102, 102);
         }
       }
     }
-    .car-details{
+    .car-details {
       overflow-x: auto;
       overflow-y: hidden;
       font-size: 0;
       white-space: nowrap;
-      .one{
+      .one {
         display: inline-block;
         width: 1.97rem;
         height: 1.27rem;
@@ -379,28 +380,28 @@
         margin-top: 1px;
         font-size: .15rem;
         /*padding: 17px 1px 1px 1px;*/
-        span:first-child{
+        span:first-child {
           font-weight: 600;
-          color: rgb(51,51,51);
+          color: rgb(51, 51, 51);
         }
-        span:last-child{
+        span:last-child {
           font-weight: 600;
           font-size: .12rem;
-          color: rgb(51,51,51);
+          color: rgb(51, 51, 51);
 
         }
-        span{
-          a:first-child{
+        span {
+          a:first-child {
             font-size: .12rem;
-            color: rgb(212,23,42);
+            color: rgb(212, 23, 42);
           }
-          a:last-child{
+          a:last-child {
             font-size: .18rem;
-            color: rgb(212,23,42);
+            color: rgb(212, 23, 42);
           }
 
         }
-        img{
+        img {
           width: 1.68rem;
           height: .78rem;
           display: inline-block;
@@ -408,7 +409,7 @@
           margin: .1rem 0 16px .1rem;
         }
 
-        p{
+        p {
           display: flex;
           justify-content: space-between;
           padding: 0 10px;
@@ -416,7 +417,7 @@
 
         }
       }
-      .two{
+      .two {
         display: inline-block;
         width: 1.97rem;
         height: 1.27rem;
@@ -425,35 +426,35 @@
         margin-left: .15rem;
         margin-top: 15px;
         font-size: .15rem;
-        p{
+        p {
           display: flex;
           justify-content: space-between;
           padding: 0 10px;
           margin-top: -3px;
-          span:first-child{
+          span:first-child {
             font-weight: 600;
-            color: rgb(51,51,51);
+            color: rgb(51, 51, 51);
           }
-          span:last-child{
+          span:last-child {
             font-weight: 600;
             font-size: .12rem;
-            color: rgb(51,51,51);
+            color: rgb(51, 51, 51);
 
           }
-          span{
-            a:first-child{
+          span {
+            a:first-child {
               font-size: .12rem;
-              color: rgb(212,23,42);
+              color: rgb(212, 23, 42);
             }
-            a:last-child{
+            a:last-child {
               font-size: .18rem;
-              color: rgb(212,23,42);
+              color: rgb(212, 23, 42);
             }
 
           }
         }
 
-        img{
+        img {
           display: inline-block;
           width: 1.63rem;
           height: .95rem;
@@ -462,34 +463,34 @@
       }
     }
   }
-/*个人中心*/
-  .van-overlay{
-    .van-popup{
+  /*个人中心*/
+  .van-overlay {
+    .van-popup {
 
     }
   }
 
-  .van-button{
-    background-color: rgba(0,0,0,0);
+  .van-button {
+    background-color: rgba(0, 0, 0, 0);
     border: none;
   }
-  .user-content{
-    background: url('./../../personal/img/img_2@2x.png')no-repeat 0 4.75rem;
+  .user-content {
+    background: url('./../../personal/img/img_2@2x.png') no-repeat 0 4.75rem;
     background-size: 100%;
     width: 100%;
     height: 100%;
     font-size: 0;
     color: #000;
-    .user{
+    .user {
       display: flex;
       align-items: center;
-      .user-img{
+      .user-img {
         width: .6rem;
         height: .6rem;
         margin: .28rem .22rem .28rem .25rem;
       }
-      .number{
-        button{
+      .number {
+        button {
           width: .64rem;
           height: .24rem;
           font-size: .1rem;
@@ -498,14 +499,14 @@
         }
       }
     }
-    .user-bg{
+    .user-bg {
       height: .1rem;
       background-color: #f6f6f6;
     }
-    ul{
-    margin-top: .14rem;
+    ul {
+      margin-top: .14rem;
 
-      li{
+      li {
         height: .42rem;
         font-size: .16rem;
         display: flex;
@@ -513,25 +514,24 @@
         align-items: center;
         padding: 0 .15rem;
         text-align: left;
-        p{
+        p {
           flex: 2;
           padding-left: .1rem;
         }
-        img:first-child{
+        img:first-child {
           width: .22rem;
           height: .22rem;
         }
-        img:last-child{
+        img:last-child {
           width: .07rem;
           height: .13rem;
         }
       }
 
-      li:hover{
+      li:hover {
         background-color: #fff6b7;
       }
     }
   }
-
 }
 </style>

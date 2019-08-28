@@ -19,7 +19,7 @@
          <img src="./img/jpg1@2x.png" alt="">
      </div>
      <div class="down">
-         <p>充值驾驶券</p>
+         <p @click="topup">充值驾驶券</p>
      </div>
  </div>
 </template>
@@ -35,7 +35,9 @@ export default {
  };
  },
  methods: {
-
+topup(){
+  this.$router.push('/topUp');
+}
  },
  components: {
 
@@ -91,7 +93,7 @@ export default {
         overflow: hidden;
         img{
             width: 1.41rem;
-            height: 0.6 rem;
+            height: 0.6rem;
         }
     }
     .down{

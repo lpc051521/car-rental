@@ -77,6 +77,7 @@ export default {
         }
     }
     button{
+      font-size: .14rem;
         overflow: hidden;
         width: 3.25rem;
         height: 0.44rem;

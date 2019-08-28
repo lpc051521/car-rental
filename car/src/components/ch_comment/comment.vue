@@ -2,7 +2,7 @@
  <div class="comment">
      <Head>
         <div class="title">
-            <img src="./img/icon_1@2x.png" alt="">
+            <img src="./img/icon_1@2x.png" alt="" @click="back">
             <h3>评论</h3>
             <img src="./img/icon2@2x.png" alt="">
         </div>
@@ -26,7 +26,9 @@ export default {
  };
  },
  methods: {
-
+   back(){
+     this.$router.go(-1);
+   }
  },
  components: {
      Head,Car,Button

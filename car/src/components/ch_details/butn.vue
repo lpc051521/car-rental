@@ -2,7 +2,7 @@
  <div class="butn">
      <p class="all">总价:</p>
      <p class="red">￥1064</p>
-     <button>立即下单</button>
+     <button @click="bills">立即下单</button>
  </div>
 </template>
 
@@ -17,7 +17,9 @@ export default {
  };
  },
  methods: {
-
+bills(){
+  this.$router.push('/bills');
+}
  },
  components: {
 

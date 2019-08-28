@@ -55,7 +55,7 @@ export default new Router({
       component:Autonym
     },
 
-
+    {
       path:'/details',
       component:Details
     },
@@ -74,8 +74,8 @@ export default new Router({
     {
       path:'/comment',
       component:Comments
-    }
-
+    },
+    {
       path:'/login',
       component:Login
     },

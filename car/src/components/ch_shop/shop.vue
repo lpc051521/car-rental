@@ -2,7 +2,7 @@
   <div class="shop">
     <Head>
          <div class="title">
-          <img src="./img/btn1@2x.png" alt="">
+          <img src="./img/btn1@2x.png" alt="" @click="back">
           <h3>门店信息</h3>    
           <img src="./img/btn2@2x.png" alt="">
         </div>
@@ -24,7 +24,11 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    back(){
+      this.$router.go(-1);
+    }
+  },
   components: {
     Title,
     User,
